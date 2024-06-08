@@ -24,7 +24,9 @@ koden gör:
                   Privat på en metod betyder att metoden är deklarerad som privat och kan endast nås från inom
                   den klass där den är deklarerad. Som private den är osynlig och otillgäglig för andra klasser.
 
- Exempel Public:      ```java
+ Exempel Public:  
+
+                      ```java
                       public class MyClass {
                       public void myPublicMethod() {
                         // Kod som kan anropas från vilken annan klass som helst
@@ -32,7 +34,9 @@ koden gör:
                       }        
                                    ```         
                      
- Exempel Private:    ```java
+ Exempel Private: 
+ 
+                     ```java
                      public class MyClass {
                      private void myPrivateMethod() {
                         // Kod som endast kan anropas inom denna klass
@@ -45,7 +49,9 @@ koden gör:
                   float, boolean, etc.) eller en klass(som String, List,etc.) betyder att metoden returnerar ett 
                   värde av den typen eller klassen.
 
-Exempel void:     ```java
+Exempel void: 
+
+                  ```java
                   public void printMessage() {
                   System.out.println("Hej, världen!");
                   }
@@ -167,9 +173,6 @@ Exempel med typ objekt: Objekt  representerar komplexa datastrukturer och är in
                MyClass obj = new MyClass();
                             ```
 
-
-
-
 #Svar på fråga 11: Metoden börjar med ett verb som beskriver vad metoden utför eller gör, exempel 'additionSum'.
                    Om du använda en verbform som början av metodnamnet kan du tydligt ange vad metoden gör och
                    det blir lättare för andra utvecklare att förstå dess syfte.
@@ -189,3 +192,19 @@ Två exemplar med kodblock:
                    System.out.println(message);
                    }
                              ```
+#Svar på fråga 12:
+
+
+#Svar på fråga 13:
+
+
+#Svar på fråga 14:
+
+
+#Svar på fråga 15:
+
+
+#Svar på fråga 16: 200 OK: Begäran har lyckats och resursen returneras.
+                   401 Unauthorized: Begäran kräver autentisering. Användaren är inte autentiserad.
+                   403 Forbidden: Begäran är förbjuden. Användaren är autentiserad men har inte tillräckliga rättigheter.
+                   404 Not Found: Den begärda resursen kunde inte hittas på servern.

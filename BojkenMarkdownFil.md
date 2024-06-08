@@ -140,15 +140,52 @@ Exempel metod i koden:
                 }
                             ```
 
+#Svar på fråga 9: Din class med tom konstruktor:
+
+                  ```java
+                  public class HakansClass {
+                  // Tom konstruktor
+                  public HakansClass() {
+                   // Tom kropp utan argument
+                     }
+                  }
+                           ```
+
+#Svar på fråga 10: Primitiva typer lagras direkt i minnen, dom representerar enkla värden och dom
+                   är inte objekt. 
+Exempel med primitiv typ:
+
+                     ```java
+                      // Primitiv typ med ett värde
+                     int number = 4;
+                            ```
+Exempel med typ objekt: Objekt  representerar komplexa datastrukturer och är instanser av klasser.
+                        De lagras i minnet via referenser.
+
+                    ```java
+               // Skapande av ett objekt (en instans av en klass)
+               MyClass obj = new MyClass();
+                            ```
 
 
 
-#Svar på fråga 9:
 
+#Svar på fråga 11: Metoden börjar med ett verb som beskriver vad metoden utför eller gör, exempel 'additionSum'.
+                   Om du använda en verbform som början av metodnamnet kan du tydligt ange vad metoden gör och
+                   det blir lättare för andra utvecklare att förstå dess syfte.
 
+Två exemplar med kodblock: 
+ 
+                    ```java
+                    public class MyClass {
 
-#Svar på fråga 10:
+                   // Metod för att beräkna summan av två tal
+                   public int calculateSum(int a, int b) {
+                   return a + b;
+                   }
 
-
-
-#Svar på fråga 11:
+                   // Metod för att skriva ut ett meddelande till konsolen
+                   public void printMessage(String message) {
+                   System.out.println(message);
+                   }
+                             ```

@@ -79,18 +79,67 @@ Exempel void:     ```java
                  }                                     
                                  ```
 
+#Svar på fråga 6: Dom  kallas argument eller parametrar. En parameter är en variabel i metoddefinitionen som fungerar
+                  som en platsmottagare för värdena som skickas till metoden. Ett argument är värdet eller 
+                  referensen som skickas till metoden när den anropas.
+                 
 
+Exempel med parametrar och argument: 
 
+                  ```java
+                  public class MyClass {
 
-#Svar på fråga 6:
+                  // Metod med två parametrar
+                   public void addNumbers(int a, int b) {
+                   int sum = a + b;
+                   System.out.println("Sum: " + sum);
+                   }
 
+                   public static void main(String[] args) {
+                   MyClass obj = new MyClass();
 
+                   // Anrop av metod med två argument
+                   obj.addNumbers(5, 7);  // 5 och 7 är argument som skickas till metoden
+                        }
+                    }              
+                               ```
 
-#Svar på fråga 7:
+#Svar på fråga 7: Jag tror att det ska blir rätt och det ska returneras resultatet som vi behöver om det plir int
+                  istället för void som det skrivs i koden.
+Exempel metod i koden: 
 
+                      ```java
+                      public int add(int a, int b){
+                      int sum = a + b;
+                      return sum;
+                      }
+                              ```
 
+#Svar på fråga 8: Exempel när man anropar denna metod från en annan metod:
 
-#Svar på fråga 8:
+                       ```java
+                 public class Main {
+
+                 // Annan metod som anropa add-metoden.
+                public void performAddition() {
+                int num1 = 4;
+                int num2 = 9;
+
+                // Anropa add-metoden och spara resultatet i en variabel.
+                MyClass obj = new MyClass();
+                int result = obj.add(num1, num2);
+
+                // Skriv ut resultatet
+                System.out.println("Resultatet av additionen är: " + result);
+                }
+
+                 public static void main(String[] args) {
+                Main mainObj = new Main();
+                mainObj.performAddition();
+                   }
+                }
+                            ```
+
 
 
 

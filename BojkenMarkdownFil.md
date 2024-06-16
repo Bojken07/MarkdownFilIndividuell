@@ -1,10 +1,9 @@
-#Beskrivning vad jag har bidragit med under grupparbetet:
+#Beskrivning vad jag har bidragit med under grupparbetet: Jag har bidragit med att hjälpa och skriva kod som 
+behövdes för att blir klart med projektet. Jag har varit närvaro på alla möte och samlingar som vi har haft 
+med teamet. 
 
-
-
-#Vilken kod har jag bidragit med:
-
-
+#Vilken kod har jag bidragit med: Jag har bidragit med några Mappningar och Controllers i GetControllers klassen
+samt i HTML.Pages. T.ex som (home sidan, search, logut-success, anonymize Email, Email.DTO klass).
 
 #Beskriv utförligt vad just min kod gör, ge kodexempel med kodblock och förklara vad
 koden gör:
@@ -14,10 +13,15 @@ koden gör:
 
 
 
-#Svar på fråga 1:
+#Svar på fråga 1:  ```java
 
-
-
+              @GetMapping("/register/user")
+    public String registerUser(Model model) {
+        model.addAttribute("user", new UserDTO());
+        logger.debug("Accessing the register user page.");
+        return "registerUser";
+    }
+                           ```
 
 #Svar på fråga 2: Public på en metod betyder att metoden är deklarerad som public och kan nås från alla
                   andra klasser och objekt, oavsett var befinner sig i applikationen. Det är tillgäglig globalt.

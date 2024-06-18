@@ -3,17 +3,51 @@ behövdes för att blir klart med projektet. Jag har varit närvaro på alla mö
 med teamet. 
 
 #Vilken kod har jag bidragit med: Jag har bidragit med några Mappningar och Controllers i GetControllers klassen
-samt i HTML.Pages. T.ex som (home sidan, search, logut-success, anonymize Email, Email.DTO klass).
+samt i HTML.Pages. T.ex som (home sidan, search, logut-success, anonymize Email, Email.DTO klass, MaskingUtils class).
 
 #Beskriv utförligt vad just min kod gör, ge kodexempel med kodblock och förklara vad
 koden gör:
+            
+
+              ```java
+              
+                public class EmailDTO {
+
+                private String email;
+
+                public String getEmail() {
+                return email;
+               }
+
+                public void setEmail(String email) {
+                this.email = email;
+                }
+              }
+
+                       ```
 
 
+Koden definierar en klass som vi har kallad EmailDTO.
+Förklaring av koden: Public betyder att är synlig och vi kan andendar från alla andra klasser.
+EmailDTO: EmailDTO classen deklarerar en klass med namnet EmailDTO. Den klassen vi använder 
+för att representera dataöverföring (Data Transfer Object) för e-postadresser.
+Private: Private anger att variabeln email endast är tillgänglig inom denna klass. 
+Ingen annan klass kan direkt komma till denna variabel.
+String email: Detta deklarerar en instansvariabel av typen String med namnet email. Denna variabel används
+för att lagra en e-postadress.
+public: Åtkomstmodifieraren public anger att metoden är tillgänglig för alla andra klasser.
+String getEmail(): Den deklarerar en metod som returnera en string.
+return email;: Metoden returnerar värdet av instansvariabeln email. Det gör det möjligt för dom andra klasser 
+att få värdet på email utan att komma direkt till den privata variabeln.
+void setEmail(String email): Detta deklarerar en metod som tar en parameter av typen String och returnerar inget 
+(void). this.email = email;: Denna rad tilldelar värdet på parameter email till instansvariabeln email. this
+refererar till den aktuella instansen av klassen, vilket hjälper till att skilja mellan instansvariabeln och
+metodparametern med samma namn.
 
 
+#Svar på fråga 1: 
 
-
-#Svar på fråga 1:  ```java
+                   ```java
 
               @GetMapping("/register/user")
     public String registerUser(Model model) {
@@ -196,16 +230,81 @@ Två exemplar med kodblock:
                    System.out.println(message);
                    }
                              ```
-#Svar på fråga 12:
 
 
-#Svar på fråga 13:
+#Svar på fråga 12: @Override används i Java för att markera en metod som överskriver en metod i en överordnad klass 
+                   eller implementerar en metod från ett interface.
+
+#Svar på fråga 13: Vi kan kalla på den metoden i subklassen i MyCustomAuthenticationProvider?: Ja, vi kan kalla den metoden som är 
+deklarerad i superklassen, för att göra detta vi måste använda nyckelordet (super) för att referera till superklassens 
+medlemmar.
+
+Kodexempel:
+
+                        ```java
+
+              public class MyCustomAuthenticationProver extends DaoAuthenticationProvider{
+                 public MyCustomAuthenticationProver(){
+                    }
+                   public void someMethod() {
+        
+                Authentication auth = ; // Här vi kan skapa en objekt
+                Authentication result = super.authenticate(auth);
+                  }
+               }
 
 
-#Svar på fråga 14:
+#Svar på fråga 14: PasswordEncoder har för uppgift för att kryptera lösenord och verifiera lösenordmatchningar. Det är en 
+viktig komponent i Spring Security som används för att kryptera lösenord och verifiera lösenordmatchningar.
+Användning av PasswordEncoder i @Bean: I Spring-applikationer konfigureras PasswordEncoder vanligtvis som en @Bean.
+Detta görs i konfigurationsklasser eller konfigurationsfiler.
 
 
-#Svar på fråga 15:
+#Svar på fråga 15:  
+ 
+                        ```xml
+
+            <?xml version="1.0" encoding="UTF-8"?>
+           <configuration>
+
+                <!-- Vanlig fil-appender -->
+           <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+           <file>myapp.log</file> <!-- Namnet på den vanliga loggfilen -->
+           <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ROLLING file-appender -->
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>myapp.%d{yyyy-MM-dd}.log</file> <!-- Mönster för filnamn som inkluderar datum -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Loggfilens namnformat -->
+            <fileNamePattern>myapp.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Antal dagar att behålla loggfilerna -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Logger för paketet se.sprinto.hakan.securityapp som använder ROLLING file-appender -->
+    <logger name="se.sprinto.hakan.securityapp" level="DEBUG">
+        <appender-ref ref="ROLLING"/>
+    </logger>
+
+    <!-- Root-logger som använder den vanliga file-appender -->
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+    </root>
+
+     </configuration>
+
+                      ```
+
 
 
 #Svar på fråga 16: 200 OK: Begäran har lyckats och resursen returneras.

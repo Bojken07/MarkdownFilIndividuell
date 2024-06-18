@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c35ce1fa-eede-4258-91e9-7f253b3396ad" name="Changes" comment="" />
+    <list default="true" id="c35ce1fa-eede-4258-91e9-7f253b3396ad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BojkenMarkdownFil.md" beforeDir="false" afterPath="$PROJECT_DIR$/BojkenMarkdownFil.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +73,10 @@
       <workItem from="1717835754417" duration="16258000" />
       <workItem from="1718012748589" duration="16000" />
       <workItem from="1718038181410" duration="346000" />
-      <workItem from="1718540098587" duration="2281000" />
+      <workItem from="1718540098587" duration="3654000" />
+      <workItem from="1718617269582" duration="344000" />
+      <workItem from="1718619919713" duration="117000" />
+      <workItem from="1718699414475" duration="1872000" />
     </task>
     <servers />
   </component>
